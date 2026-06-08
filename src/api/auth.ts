@@ -1,6 +1,24 @@
 import { IncomingHttpHeaders } from "http";
+import { describe, expect, test } from "vitest";
 
 export function getAPIKey(headers: IncomingHttpHeaders): string | null {
+  const person = {
+  isActive: true,
+  age: 32,
+};
+
+describe("person", () => {
+  test("person is defined", () => {
+    expect(person).toBeDefined();
+  });
+
+  test("is active", () => {
+    expect(person.isActive).toBeTruthy();
+  });
+});
+
+
+
   const authHeader = headers["authorization"];
   if (!authHeader) {
     return null;

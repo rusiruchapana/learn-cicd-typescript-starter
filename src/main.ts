@@ -19,7 +19,7 @@ const app = express();
 app.use(express.json());
 
 
-let unUsedVariable;
+
 
 app.use(
   cors({
